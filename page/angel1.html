@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- Enlace al archivo CSS externo -->
+      <link rel="stylesheet" href="angel1.css">
+      <!-- Título -->
+      <title>5ein Angel 1</title>
+
+      <!-- Incluye Three.js -->
+      <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/"
+          }
+        }
+      </script>
+
+      <!-- El usuario proviene de index.html por medio de shortcut? -->
+      <script>
+        // Asegúrate de que el acceso a esta página provenga del atajo de teclado
+        if (!sessionStorage.getItem('accessedViaShortcut')) {
+            window.location.href = '/index.html'; // Redirige a la página principal
+        }
+      </script>
+
+      <!-- Archivo principal del visor 3D del angel 1 -->
+      <script type="module" src="/page/angel1.js"></script>
+      <!-- Contenedor del visor 3D - Angel 1 -->
+      <div id="angel1-canvas"></div>
+      
+  </head>
+
+  <body>
+
+  </body>
+
+  <footer>
+    <p>Y abraham dijo. REVISAR TEXTO</p>
+    <h1></h1>
+
+
+  </footer>
+</html>

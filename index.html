@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Título -->
+    <title>5ein Angel</title>
+	
+    <!-- Scripts de atajos para acceder a las 9 paginas -->
+        <!-- Angel 1 -->
+        <script>
+        document.addEventListener("keydown", function(event) {
+          if (event.ctrlKey && event.key === '1') {
+              sessionStorage.setItem('accessedViaShortcut', 'true');
+              window.location.href = 'page/angel1.html';
+              event.preventDefault();
+          }
+        });
+        </script>
+
+</head>
+
+<body>
+    <h1></h1>
+    <p>Mensajes secretos guardaron los angeles caidos antes de la rebelion contra Dios, cada uno revelara misterios ocultos por eones</p>
+    <div id="canvas-container"></div>
+
+    <!-- Archivo Javascript del canvas -->
+	<canvas id="maincanvas" width="300" height="400"></canvas>
+    <script type="module" src="main.js"></script>
+  
+</body>
+</html>
