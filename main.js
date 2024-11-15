@@ -58,5 +58,15 @@ const canvas = document.getElementById('maincanvas');
       }
     });
 
+    // Agregar efectos al pasar el mouse
+    canvas.addEventListener('mouseover', () => {
+      canvas.style.transform = 'scale(1.1)'; // Aumentar tamaño
+      canvas.style.transition = 'transform 0.3s ease'; // Transición suave
+    });
+
+    canvas.addEventListener('mouseout', () => {
+      canvas.style.transform = 'scale(1)'; // Volver al tamaño normal
+    });
+
     // Dibujar la carta inicial (frontal)
     frontImage.onload = drawCard;
