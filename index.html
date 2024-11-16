@@ -6,6 +6,9 @@
     <!-- Título -->
     <title>5ein Angel Main page</title>
 	
+    <!-- Optimizacion de imagenes Script LazySizes -->
+    <script src="lazysizes.min.js" async=""></script>
+
     <!-- Scripts de atajos para acceder a las 9 paginas -->
         <!-- Angel 1 -->
         <script>
@@ -24,14 +27,20 @@
     <h1></h1>
     <p>Mensajes secretos guardaron los angeles caidos antes de la rebelion contra Dios, cada uno revelara misterios ocultos por eones</p>
 
-    <!-- Contenedor de la carta flip -->
+<!-- Contenedor de la carta flip -->
   <div class="card-container">
     <div class="card">
+        <!-- Frontal -->
       <div class="card-front">
-        <img src="./images/angel1/angel1_front.png" alt="Card Front" />
+        <img data-src="./images/angel1/angel1_front.png"
+        src="./images/angel1/angel1_front_lowres.png" class="lazyload"
+        alt="Card Front" />
       </div>
+        <!-- Back -->
       <div class="card-back">
-        <img src="./images/angel1/angel1_back.png" alt="Card Back" />
+        <img data-src="./images/angel1/angel1_back.png"
+        src="./images/angel1/angel1_back_lowres.png" class="lazyload"
+        alt="Card Back" />
       </div>
     </div>
   </div>
