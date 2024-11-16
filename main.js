@@ -6,7 +6,7 @@ const canvas = document.getElementById('maincanvas');
     const frontImage = new Image();
     const backImage = new Image();
   //CARGA LAS IMAGENES AQUI
-    frontImage.src = './images/angel1/angelcard_1.jpg';
+    frontImage.src = './images/angel1/AngelCard_1.jpg';
     backImage.src = './images/envmap.jpg';
 
     let animationInProgress = false;
@@ -38,7 +38,7 @@ const canvas = document.getElementById('maincanvas');
     // Animar la rotación de la carta
     function animateFlip() {
       if (!animationInProgress) return;
-      flipProgress += 0.02; // Ajusta la velocidad de la animación
+      flipProgress += 0.03; // Ajusta la velocidad de la animación
 
       if (flipProgress >= 1) {
         flipProgress = 0;
@@ -69,5 +69,9 @@ const canvas = document.getElementById('maincanvas');
       canvas.style.transform = 'scale(1)'; // Volver al tamaño normal
     });
 
-    // Dibujar la carta inicial (frontal)
-    frontImage.onload = drawCard;
+    // Asegurarse de que las imágenes se carguen antes de dibujar
+frontImage.onload = () => {
+  backImage.onload = () => {
+    drawCard(); // Dibujar la carta inicial (frontal) solo cuando ambas imágenes se carguen
+  };
+};
