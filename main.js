@@ -5,8 +5,9 @@ const canvas = document.getElementById('maincanvas');
     // Imágenes de la carta (frontal y trasera)
     const frontImage = new Image();
     const backImage = new Image();
-    frontImage.src = '/images/angel1/angelcard_1.jpg';
-    backImage.src = '/images/envmap.jpg';
+  //CARGA LAS IMAGENES AQUI
+    frontImage.src = './images/angel1/angelcard_1.jpg';
+    backImage.src = './images/envmap.jpg';
 
     let animationInProgress = false;
     let flipProgress = 0; // Va de 0 a 1
