@@ -50,8 +50,11 @@ p {
 
 /* Estilo para la carta */
 .card {
-    width: 500px;
-    height: 800px;
+    width: 80vw;
+    height: 100vw;
+    max-width: 600px;
+    max-height: 900px;
+    aspect-ratio: 3/4;
     position: relative;
     transform-style: preserve-3d; /* Mantiene la 3D mientras gira */
     transition: transform 0.6s ease, box-shadow 0.7s ease-in-out; /* Controla la velocidad de la animación */
