@@ -15,7 +15,7 @@ body {
 
 /* Estilo del título */
 h1 {
-    background-image: url('images/5einTitle.png');
+    background-image: url('./images/5einTitle.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -53,14 +53,16 @@ p {
     height: 800px;
     position: relative;
     transform-style: preserve-3d; /* Mantiene la 3D mientras gira */
-    transition: transform 0.6s ease; /* Controla la velocidad de la animación */
+    transition: transform 0.6s, ease; /* Controla la velocidad de la animación */
     cursor: pointer; /* Apunta que se puede hacer clic */
     transform: rotateY(5deg); /* Inicialmente no está rotada */
+    border-radius: 40px; /* Bordes redondeados */
 }
 
 /* La animación de escala también se aplica mientras está volviendo */
 .card:hover {
     transform: scale(1.05); /* Escala suave al pasar el ratón */
+    box-shadow: 0 0 15px 5px rgba(255, 253, 226, 0.6); /* Resplandor blanco sutil */
 }
 
 /* Estilos para el frente y la parte trasera de la carta */
@@ -80,7 +82,7 @@ p {
 
 .card-back {
     
-    transform: rotateY(175deg); /* Rota la parte trasera 180 grados */
+    transform: rotateY(180deg); /* Rota la parte trasera 180 grados */
 }
 
 /* Imagen que cubra todo el contenedor de la carta */
@@ -92,7 +94,7 @@ p {
 
 /* Gira la carta al hacer clic */
 .card.flipped {
-    transform: rotateY(180deg); /* Al darle vuelta, gira la carta 180 grados */
+    transform: rotateY(175deg); /* Al darle vuelta, gira la carta 180 grados */
 }
 
 /* Escala suave incluso durante el giro */
