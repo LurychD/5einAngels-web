@@ -53,7 +53,7 @@ p {
     height: 800px;
     position: relative;
     transform-style: preserve-3d; /* Mantiene la 3D mientras gira */
-    transition: transform 0.6s, ease; /* Controla la velocidad de la animación */
+    transition: transform 0.6s ease, box-shadow 0.7s ease-in-out; /* Controla la velocidad de la animación */
     cursor: pointer; /* Apunta que se puede hacer clic */
     transform: rotateY(5deg); /* Inicialmente no está rotada */
     border-radius: 40px; /* Bordes redondeados */
@@ -62,7 +62,8 @@ p {
 /* La animación de escala también se aplica mientras está volviendo */
 .card:hover {
     transform: scale(1.05); /* Escala suave al pasar el ratón */
-    box-shadow: 0 0 15px 5px rgba(255, 253, 226, 0.6); /* Resplandor blanco sutil */
+    box-shadow: 0 0 30px 5px rgba(255, 253, 226, 0.6), /* Resplandor externo */
+    inset 0 0 30px 70px rgba(255, 253, 226, 0.6); /* Resplandor interno*/
 }
 
 /* Estilos para el frente y la parte trasera de la carta */
