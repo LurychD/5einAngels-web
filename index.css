@@ -5,12 +5,12 @@ body {
     color: #ecdeea; /* Texto gris claro */
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: fit-content;
 }
 
 /* Estilo del título */
@@ -43,8 +43,9 @@ p {
 /*INSERTAR AQUI ANIMACION DE CARD FLIP
 /* Estilo para el contenedor de la carta flip */
 .card-container {
-    perspective: 1000px; /* Da una sensación de profundidad */
-    margin-top: 30px; /* Espaciado adicional */
+    perspective: 2000px; /* Da una sensación de profundidad */
+    margin-top: 50px; /* Espaciado adicional */
+ 
 }
 
 /* Estilo para la carta */
@@ -57,13 +58,14 @@ p {
     cursor: pointer; /* Apunta que se puede hacer clic */
     transform: rotateY(5deg); /* Inicialmente no está rotada */
     border-radius: 40px; /* Bordes redondeados */
+    z-index: 2; /*el contenedor esta por encima de la imagen*/ 
 }
 
 /* La animación de escala también se aplica mientras está volviendo */
 .card:hover {
     transform: scale(1.05); /* Escala suave al pasar el ratón */
     box-shadow: 0 0 30px 5px rgba(255, 253, 226, 0.6), /* Resplandor externo */
-    inset 0 0 30px 70px rgba(255, 253, 226, 0.6); /* Resplandor interno*/
+    inset 0 0 50px 5px rgba(255, 253, 226, 0.6); /* Resplandor interno*/
 }
 
 /* Estilos para el frente y la parte trasera de la carta */
@@ -78,6 +80,7 @@ p {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 1;
 }
 
 
@@ -90,7 +93,8 @@ p {
 .card-front img, .card-back img {
     width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
     height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
-    object-fit: cover; /* Hace que la imagen se ajuste al contenedor sin distorsionarse */
+    object-fit: fill; /* Hace que la imagen se ajuste al contenedor sin distorsionarse */
+    z-index: 0;
 }
 
 /* Gira la carta al hacer clic */
