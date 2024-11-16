@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 150vh;
 }
 
 /* Estilo del título */
@@ -36,6 +36,74 @@ p {
     line-height: 1.6;
     margin-top: 20px;
 }
+
+
+
+/********************************************************
+/*INSERTAR AQUI ANIMACION DE CARD FLIP
+/* Estilo para el contenedor de la carta flip */
+.card-container {
+    perspective: 1000px; /* Da una sensación de profundidad */
+    margin-top: 30px; /* Espaciado adicional */
+}
+
+/* Estilo para la carta */
+.card {
+    width: 500px;
+    height: 800px;
+    position: relative;
+    transform-style: preserve-3d; /* Mantiene la 3D mientras gira */
+    transition: transform 0.6s ease; /* Controla la velocidad de la animación */
+    cursor: pointer; /* Apunta que se puede hacer clic */
+    transform: rotateY(5deg); /* Inicialmente no está rotada */
+}
+
+/* La animación de escala también se aplica mientras está volviendo */
+.card:hover {
+    transform: scale(1.05); /* Escala suave al pasar el ratón */
+}
+
+/* Estilos para el frente y la parte trasera de la carta */
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden; /* Oculta la parte de atrás cuando se voltea */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.card-back {
+    
+    transform: rotateY(175deg); /* Rota la parte trasera 180 grados */
+}
+
+/* Imagen que cubra todo el contenedor de la carta */
+.card-front img, .card-back img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+    object-fit: cover; /* Hace que la imagen se ajuste al contenedor sin distorsionarse */
+}
+
+/* Gira la carta al hacer clic */
+.card.flipped {
+    transform: rotateY(180deg); /* Al darle vuelta, gira la carta 180 grados */
+}
+
+/* Escala suave incluso durante el giro */
+.card.flipped:hover {
+    transform: rotateY(180deg) scale(1.05); /* Combina rotación y escalado al hacer hover en estado flipped */
+}
+
+/********************************************************
+
+
+
 
 /* Estilo para el contenedor del canvas */
 #finalspace {
